@@ -1,0 +1,45 @@
+<html>
+<meta charset="utf-8">
+<head>
+	<title>
+		密保问题设置
+	</title>
+	<style type="text/css">
+		#zym123{background-color:black;text-align: center;}
+	</style>	
+</head>
+<script type="text/javascript" src="../../jquery/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css" />
+<body>
+<div id='zym123'>
+	<form class="form-inline" action="setques.php" method="POST" target="_self" enctype="application/x-www-form-urlencoded">
+		<font color="yellow"  size="10px">请输入您要找回的用户名：</font><br />
+		<input type="text" class="form-control" name="username">
+		<br />
+		<font color="green" size="10px">请输入您要设置的密保问题：</font><br>
+		<input type="text" class="form-control" name="userques">
+		<br />
+		<font color="red" size="10px">请输入您要设置的密保问题答案：</font><br>
+		<input type="text" class="form-control" name="answer">
+		<br />
+		<font color="yellow" size="10px">请输入您要设置的第二个密保问题：</font><br>
+		<input type="text" name="userques2" class="form-control">
+		<br />
+		<font color="green" size="10px">
+		请输入第二个密保问题的答案：</font><br>		
+		<input type="text" class="btn-lg" name="answer2">
+		<br />
+		<font color="white" size="10px">点此提交您的密保问题，为安全起见，我们会在后端将问题与答案加密，请您</font><font color="red" size="10px">务必记准您的密保问题！</font>
+		<br>
+		<input class="btn-lg" type="submit" name="submit" value="ok"
+		 onclick="testalert()">
+	</form>
+</div>
+<script>
+	function testalert(){
+		alert("请确认您填写准确无误！后续可以凭借此凭据找回密码！");
+	}
+</script>
+</body>
+</html>

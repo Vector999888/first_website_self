@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <script type="text/javascript" src="../jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <style>
+        html {
+            overflow: hidden;
+        }
+        body {
+            background: url('./img/login-bg.png') no-repeat;
+            background-size: 100% auto;
+        }
+
+        #login_box {
+            /*width: 20%;*/
+            width: 80%;
+            height: 400px;
+            background-color: #00000060;
+            margin: auto;
+            margin-top: 10%;
+            text-align: center;
+            border-radius: 10px;
+            padding: 50px 50px;
+        }
+
+        #login_box input,
+        #login_box button {
+            outline: none;
+        }
+
+        #login_box h2 {
+            color: #ffffff90;
+            margin-top: 5%;
+        }
+
+        #login_box #form #input_box {
+            margin-top: 5%;
+        }
+
+        #login_box #form #input_box input {
+            border: 0;
+            width: 60%;
+            font-size: 15px;
+            color: #ffffff;
+            background: #ffffff00;
+            border-bottom: 2px solid #ffffff;
+            padding: 5px 10px;
+            margin-top: 10px;
+        }
+
+        #submit {
+            margin-top: 50px;
+            width: 40%;
+            height: 20px;
+            border-radius: 10px;
+            border: 0;
+            color: #fff;
+            font-size: 15px;
+            background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+            cursor: pointer;
+        }
+
+        #login_box #sign_up a {
+            color: #b94648;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="login_box">
+        <h2>登录</h2>
+        <form id="form" class="form-inline" action="./post.php" method="post" target="_self">
+            <div id="input_box">
+                <input type="text" class="form-control" placeholder="Username" name="username" required autocomplete="off">
+            </div>
+            <div id="input_box">
+                <input type="password" class="form-control" placeholder="Password" name="userpass" required autocomplete="off">
+            </div>
+            <input id="submit" class="btn-lg" type="submit" name="usersubmit" value="login">
+        </form>
+        <br>
+        <div id="sign_up">
+            <a style="color: rgb(179, 174, 174); " href="./register.html">没有账号？点此注册</a>
+            <br />
+            <a href="./find/find.html" style="color: red;font-size: 15px;">忘记密码了？？您可以点击这里通过密保问题重置您的密码</a>
+        </div>
+    </div>
+</body>
+
+</html>

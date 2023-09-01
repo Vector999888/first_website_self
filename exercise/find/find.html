@@ -1,0 +1,63 @@
+<html>
+<meta charset="utf-8">
+<head>
+	<title>
+		密保问题找回密码
+	</title>
+	<style type="text/css">
+		#zym123{background-color:black;text-align: center;}
+	</style>
+</head>
+<script type="text/javascript" src="../../jquery/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css" />
+<body>
+	<div id='zym123'>
+	<form action='find.php' class="form-inline" method="POST" target="_self" enctype="application/x-www-form-urlencoded">
+		<font color="white" size="15px">
+		请输入您要找回的用户名：
+		</font>
+		<br />
+		<input class="form-control" type="text" name="username">
+		<br />
+		<font color="red" size="15px">
+		请输入您设置的第一个密保问题：</font><br />
+		<input type="text" class="form-control" name="userques">
+		<br />
+		<font color="yellow" size="15px">
+		请输入您设置的第一个密保问题的答案：</font><br />
+		<input type="text" class="form-control" name="answer">
+		<br />
+		<font color="green" size="15px">
+		请输入您设置的第二个密保问题：</font><br />
+		<input type="text" name="userques2" class="form-control">
+		<br />
+		<font color="red" size="15px">
+		请输入您设置的第二个密保问题的答案：</font><br />
+		<input type="text" name="answer2" class="form-control">
+		<br />
+		<font size="15px" color="#f0f8ff">提交</font>
+		<input class="btn-lg" type="submit" name="submit" value="submit">
+	</form>
+	</div>
+	<button id="zym569" class="btn-lg" type="button" onclick="notice()">点我查看注意事项</button>
+	<font color="red" size="15px" id='zym666'></font>
+</body>
+<script>
+	function notice(){
+		var a = document.getElementById('zym666');
+		a.innerHTML="请注意，应当准确填写您之前设置的密保问题与答案！";
+		var b=document.getElementById('zym569');
+		b.innerText="关闭公告";
+		b.onclick=close;
+		b.class="btn-lg";
+	}
+	function close(){
+		var t=document.getElementById('zym569');
+		t.innerText='点我查看注意事项';
+		t.onclick=notice;
+		var d=document.getElementById('zym666');
+		d.innerHTML='';
+	}
+</script>
+</html>

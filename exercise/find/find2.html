@@ -1,0 +1,38 @@
+<html>
+			<meta charset='utf-8'>
+			<head>
+			<title> 找回密码
+			</title>
+			<style>
+				#zym888{background-color:black;text-align:center}
+			</style>
+			</head>
+			<script type="text/javascript" src="../../jquery/jquery-3.6.0.min.js"></script>
+			<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+			<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css" />
+			<body>
+			<div id='zym888'>
+				<form target="_self" class="form-inline" action="find2.php" method="POST" enctype="application/x-www-form-urlencoded">
+				<font color="yellow" size="15px">
+				输入您要找回的用户名：</font><br />
+				<input type="text" class="form-control" name="username">
+				<br />
+				<font color="red" size="15px">
+				输入您要重置的新密码：</font><br />
+				<input type="password" class="form-control" name="userpass">
+				<br />
+				<font color="yellow" size="15px">
+				再次输入您要重置的新密码：</font><br />
+				<input type="password" class="form-control" name="newpass">
+				<br />
+				<font color="green" size="15px">
+				点此提交</font><br />
+				<input type="submit" class="btn-lg" name="submit2" value="submit2">
+				</form>
+			</div>
+				<script>
+			alert("请注意，密码不能包含特殊符号与空格哦！");
+			</script>
+			</body>
+		
+</html>

@@ -1,0 +1,79 @@
+﻿<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注销</title>
+    <script type="text/javascript" src="../jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <style>
+        html {
+            overflow: hidden;
+        }
+        body {
+            background: url('./img/login-bg.png') no-repeat;
+            background-size: 100% auto;
+        }
+
+        #login_box {
+            width: 20%;
+            height: 260px;
+            background-color: #00000060;
+            margin: auto;
+            margin-top: 10%;
+            text-align: center;
+            border-radius: 10px;
+            padding: 50px 50px;
+        }
+
+        #login_box input,
+        #login_box button {
+            outline: none;
+        }
+
+        #login_box h2 {
+            color: #ffffff90;
+            margin-top: 5%;
+        }
+
+        #login_box #form #input_box {
+            margin-top: 5%;
+        }
+
+        #login_box #form #input_box input {
+            border: 0;
+            width: 60%;
+            font-size: 15px;
+            color: #ffffff;
+            background: #ffffff00;
+            border-bottom: 2px solid #ffffff;
+            padding: 5px 10px;
+            margin-top: 10px;
+        }
+
+        #submit {
+            margin-top: 50px;
+            width: 40%;
+            height: 20px;
+            border-radius: 10px;
+            border: 0;
+            color: #fff;
+            font-size: 15px;
+            background-color: rgb(248, 109, 90);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="login_box">
+        <h2>注销</h2>
+        <form id="form" action="./logout.php" method="post" target="_blank">
+            <div id="input_box" style="margin-top: 30px">
+                <input type="text" placeholder="输入您要注销用户名" name="username">
+            </div>
+            <input id="submit" type="submit" name="usersubmit" value="submit">
+        </form>
+    </div>
+</body>
+
+</html>

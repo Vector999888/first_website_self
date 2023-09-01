@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		管理员登录
+	</title>
+	<style type="text/css">
+		#zym888{background-color: black;text-align: center;}
+		#zym999{background-color: green;color: red;text-align: center;}
+	</style>
+</head>
+<script type="text/javascript" src="../../jquery/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css" />
+<body>
+	<h1 id="zym999">
+		管理员登录
+	</h1>
+	<form id="zym888" class="form-inline" action="admin.php" method="POST" target="_self" enctype="application/x-www-form-urlencoded">
+		<font color="red" size="15px">用户名:</font><br>
+		<input class="form-control" type="text" name="username666">
+		<br>
+		<font color="green" size="15px">密码:</font><br>
+		<input type="password" class="form-control" name="password666">
+		<br>
+		<font color="yellow" size="15px">验证码:</font><br>
+		<input type="text" class="form-control" name="captcha"><br>
+		<img src="../captcha/make.php?num=1" onclick="this.src='/exercise/captcha/make.php?num='+Math.random();">
+		<br>
+		<font color="red" size="15px">提交：</font><br>
+		<input type="submit" class="btn-lg" name="submit" value="submit">
+		<br>
+	</form>
+</body>
+</html>

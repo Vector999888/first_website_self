@@ -1,0 +1,10 @@
+<?php
+$host="localhost";
+$username="adminzym";
+$password="zym856460.";
+$db_name="adminzym";
+$link=mysqli_connect($host,$username,$password,$db_name);
+if(!$link=mysqli_connect($host,$username,$password,$db_name)){
+	die(mysqli_connect_error());
+}
+?>

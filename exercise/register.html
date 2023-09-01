@@ -1,0 +1,117 @@
+﻿<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <script type="text/javascript" src="../jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <style>
+        html {
+            overflow: hidden;
+        }
+
+        body {
+            background: url('./img/login-bg.png') no-repeat;
+            background-size: 100% auto;
+        }
+
+        #login_box {
+            width: 80%;
+            height: 400px;
+            background-color: #00000060;
+            margin: auto;
+            margin-top: 10%;
+            text-align: center;
+            border-radius: 10px;
+            padding: 50px 50px;
+        }
+
+        #login_box input,
+        #login_box button {
+            outline: none;
+        }
+
+        #login_box h2 {
+            color: #ffffff90;
+            margin-top: 5%;
+        }
+
+        #login_box #form #input_box {
+            margin-top: 5%;
+        }
+
+        #login_box #form #input_box input {
+            border: 0;
+            width: 60%;
+            font-size: 15px;
+            color: #ffffff;
+            background: #ffffff00;
+            border-bottom: 2px solid #ffffff;
+            padding: 5px 10px;
+            margin-top: 10px;
+        }
+
+        #submit {
+            margin-top: 50px;
+            width: 40%;
+            height: 20px;
+            border-radius: 10px;
+            border: 0;
+            color: #fff;
+            font-size: 15px;
+            background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+            cursor: pointer;
+        }
+
+        #login_box #sign_up a {
+            color: #b94648;
+        }
+    </style>
+</head>
+
+<body>
+<font id="notice" color="red"></font>
+    <div id="login_box">
+
+        <h2>注册</h2>
+        <div id="zym900"></div>
+        <form id="form" class="form-inline" action="register.php" method="post" target="_blank">
+            <div id="input_box">
+                <input type="text" placeholder="用户名" class="form-control" name="username" required autocomplete="off">
+            </div>
+            <div id="input_box">
+                <input type="password" class="form-control" placeholder="密码" name="userpass" required autocomplete="off">
+            </div>
+            <div id="input_box">
+                <input type="password" class="form-control" placeholder="确认密码" name="repass" required autocomplete="off">
+            </div>
+            <input id="submit" type="submit" class="btn-lg" name="usersubmit" value="register">
+        </form>
+        <br>
+        <div id="sign_up">
+            <a style="color: rgb(179, 174, 174); "
+                href="login_post.html">已注册？点此登录</a>
+            <button class="btn-lg" onclick="notice()" style="color:red;font-size: 15px;">点我查看最新公告</button>
+        </div>
+
+    </div>
+    <script>
+        function notice(){
+        var a=document.getElementById('notice');
+        a.innerHTML="您注册账号以后可以设置密保问题，为安全起见，您可以设置较为私密的问题并确保答案准确，为保护您的个人隐私，问题与答案将会进行不可逆加密。";
+        var e=document.getElementById('zym900');
+        var f=document.createElement('button');
+        f.className='btn-lg';
+        f.type='button';
+        f.onclick=close;
+        f.innerText="点此关闭公告";
+        e.appendChild(f);
+    }
+    function close(){
+            var c= document.getElementById('notice');
+            c.innerHTML='';
+    }
+    </script>
+</body>
+
+</html>

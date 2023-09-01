@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title>wzy</title>
+	<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	overflow: hidden;
+}
+#zym546{
+	text-align: center;
+}
+		/*canvas{ background: #0c0c0c; }*/
+</style>
+	</head>
+	    <script type="text/javascript" src="./jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
+	<body>
+		<div id='zym546' >
+		<h1 style="color:green">
+			欢迎来到我的网页</h1>
+		<p><a href="./blog/index.html"><font size="15px">点此进入我的个人博客</font>
+		</a>
+		<br>
+		<a href="./build/wooyun.rar"><font size="15px">点此下载乌云网技术文章合集</font></a>
+		<br />
+		<a href="https://tools.iculture.cc/"><font size="15px">点击进入在线工具网站</font></a>
+		<br />
+		<a href="./exercise/index.php"><font size="15px">点此进入本人自建在线留言板</font></a>
+		<br />
+			<a href="./exercise/captcha/slide/index.html"><font size="15px">点此进入泄露密码查询(需通过验证)</font></a>
+		<button id="678888" type="button" class="btn-lg" onclick="message()">点我查看公告</button>
+		<br />
+		<font color="red" id='123'></font>
+		</div>
+
+		<script>
+			function message(){
+			document.getElementById('123').innerHTML="各位访客们好，本人是站长，这个网站有本人自建留言板，但是页面可能较为简陋，还望包涵，如果您有建议，可以发送至站内留言板";
+			var a = document.getElementById('678888');
+			a.innerText="关闭公告";
+			a.onclick=close;
+		}
+		function close(){
+			var e = document.getElementById('123');
+			e.innerText='';
+			var f=document.getElementById('678888');
+			f.innerText='点我查看公告';
+			f.onclick=message;
+		}
+		</script>
+		<br />
+<canvas id="canvas"> 您的浏览器不支持canvas标签，请您更换浏览器 </canvas>
+<script>
+		var canvas=document.getElementById("canvas");
+		var can=canvas.getContext("2d");
+			//var s=;获取屏幕
+		var w=canvas.width=document.documentElement.clientWidth;;//获取屏幕宽度
+		var h=canvas.height=document.documentElement.clientHeight;;//获取屏幕高度
+		can.fillStyle=color2();
+
+		var words = Array(256).join("1").split("");
+		//设置一个包含256个空元素的数组，join("1")用来把数组里的元素拼接成字符串，split("")过滤掉数组里的空元素
+
+		setInterval(draw,50);
+
+
+		 //can.font="30px 微软雅黑"; //只设置一个不生效，一定要两个属性都设
+		// //绘制实心的文本：绘制的文本，文本的坐标x，文本的坐标y
+		 //can.fillText("黑客帝国",100,100);
+		 //setInterval(draw,50);
+
+
+
+		function draw(){
+			//can.fillRect()画一个实心矩形:坐标x，坐标y，矩形宽，举行高
+			can.fillStyle='rgba(0,0,0,0.05)';
+			can.fillRect(0,0,w,h);
+			can.fillStyle=color2();
+			words.map(function(y,n){
+				text=String.fromCharCode(Math.ceil(65+Math.random()*57)); //转换为键盘上值
+				x = n*10;
+				can.fillText(text,x,y)
+				words[n]=( y > 758 + Math.random()*484 ? 0:y+10 );
+			});//数组元素的一个映射
+		}
+
+		//获取随机颜色，三种方法
+		function color1(){
+			var colors=[0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'];
+			var color="";
+			for( var i=0; i<6; i++){
+				//Math.random()产生一个0-1之间的小数
+				var n=Math.ceil(Math.random()*15);
+				color += "" + colors[n];
+				// console.log(color);
+			}
+			return '#'+color;
+		}
+
+		function color2(){
+			var color = Math.ceil(Math.random()*16777215).toString(16); 
+			// for( var i=color.length; i<6; i++ ){
+			// 	color = '0'+color;
+			// }
+			while(color.length<6){
+				color = '0'+color;
+			}
+			return '#'+color;
+		}
+
+		function color3(){
+			return "#" + (function(color){
+				return new Array(7-color.length).join("0")+color;
+				//神奇的方法，总共字符串有6位，如果只产生了3位，则前面应该补三个0，在长度为7-3=4的空数组中利用join插入0，则为['',0,'',0,'',0,''],刚好三个0补在前面
+			})((Math.random()*0x1000000 << 0).toString(16))
+			// << 0 也是一种取整的方法
+		}
+	</script>
+</body>
+</html>
