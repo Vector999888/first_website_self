@@ -1,8 +1,8 @@
 <meta charset="UTF-8">
 <?php
 /*
-*Author:FancyPig Team
-*https://www.iculture.cc
+*Author:zym
+*https://www.zymiesafe.com
 */
 header("content-type:text/html;charset=utf-8");         //设置编码
 if(empty($_COOKIE["access_check"])){
@@ -180,7 +180,7 @@ if(form.q.value=="" || length(form.q.value)<6){
 			}
 			        echo '<hr align="center" width="550" color="#2F2F2F" size="1"><font color=#ff0000>我们无法保证信息的完全准确性';
 				echo '<br />信息如果不完整或者存在缺失，您可以联系我们添加或修改';
-				echo '<br /><font>联系站长:2789570586@qq.com</font>';
+				echo '<br /><font>联系站长:**@**.com</font>';
 				echo '</ul>';
 		}
 		?>
